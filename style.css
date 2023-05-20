@@ -1,0 +1,377 @@
+/* This Project is build by Aditya Kumar
+Github - https://github.com/adityakumar-in
+Repository Link - https://github.com/adityakumar-in/Yhills_Todo_List
+LinkedIn - https://www.linkedin.com/in/aditya-kumar-609909259/ */
+
+/* Importing 'Poppins' & 'Ubuntu' Fonts from 'Google Fonts' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+/* Apply Globally */
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: rgb(244, 247, 250);
+}
+
+
+/* Template for center any Element */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Setting Style of 'Header' i.e., 'Logo & Title' */
+.header {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 40px;
+}
+.header img {
+    margin: 5px 12px;
+    height: 50px;
+}
+
+
+/* Setting Styles of Input tag - 'Title' & 'Date' */
+.titleAndDate {
+    width: 85%;
+    background-color: rgb(244, 248, 251);
+    padding: 12px 15px;
+    border-radius: 25px;
+    margin: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#title {
+    width: 68%;
+    border: 1px solid rgb(244, 248, 251);
+}
+#date {
+    width: 28%;
+    outline: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.694);
+    border-bottom: 0px solid rgb(244, 248, 251);
+    border-right: 0px solid rgb(244, 248, 251);
+    border-top: 0px solid rgb(244, 248, 251);
+    padding-left: 2px;
+    font-size: 16px;
+}
+#title, #date, #description {
+    font-size: 20px;
+    outline: none;
+    background-color: rgb(244, 248, 251);
+}
+
+
+/* Style for 'Todo Details' */
+#task {
+    background-color: rgb(244, 248, 251);
+    width: 85%;
+    padding: 7px 14px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#description {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    border: 1px solid rgb(244, 248, 251);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* Click Animation for '+ Add' Button */
+@keyframes clicked {
+    from {
+        height: 45px;
+        width: 90px;
+        font-size: 16px;
+    }
+    to {
+        height: 50px;
+        width: 100px;
+        font-size: 18px;
+    }
+    
+}
+
+
+/* Adding Glass-Effect to Buttons Accordingly */
+.btnGlassEffect {
+    background: linear-gradient(
+      135deg,
+      #27b0ffbe,
+      #092655f0
+    );
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px); /* If above line doesn't work */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border-radius: 24px;
+    color: rgb(225, 224, 224);
+}
+.btnGlassEffect1 {
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px); /* If above line doesn't work */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border-radius: 24px;
+}
+.btnGlassEffect2 {
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px); /* If above line doesn't work */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border-radius: 24px;
+}
+.btnGlassEffect3 {
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px); /* If above line doesn't work */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border-radius: 24px;
+}
+
+
+/* Resizing the buttons Accordingly */
+.buttonColors {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.btn {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 95px;
+    font-size: 18px;
+    font-family: 'Archivo Black', sans-serif;
+    color: rgb(210, 230, 245);
+}
+.btn1 {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 95px;
+    font-size: 18px;
+    font-family: 'Archivo Black', sans-serif;
+}
+.btn2 {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 95px;
+    font-size: 18px;
+    font-family: 'Archivo Black', sans-serif;
+}
+.btn3 {
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 95px;
+    font-size: 18px;
+    font-family: 'Archivo Black', sans-serif;
+}
+.buttonCover {
+    margin: 20px 0;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
+}
+
+
+/* Setting Styles for 'Filter' Buttons  */
+#all {
+    color: rgb(210, 230, 245);
+    background: linear-gradient(
+    135deg,
+    #2764ffbe,
+    #1b0955f0
+    );
+}
+#active {
+    color: #420404f0;
+      background: linear-gradient(
+      135deg,
+      #fedadabe,
+      #e3c4c4f0
+      );
+}
+#completed {
+    color: #022d08f0;
+    background: linear-gradient(
+      135deg,
+      #e9ffe6be,
+      #b9d8bcf0
+    );
+}
+.footer {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.template {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Defining Hovering Effect  */
+.btn:hover, .btn3:hover, .btn2:hover, .btn1:hover {
+    cursor: pointer;
+}
+.btn:active {
+    animation: clicked 0.8s linear 1;
+}
+
+
+/* Styling the Radio Buttons */
+.size {
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgb(244, 247, 250);
+    border-radius: 17px;
+}
+#green {
+    background-color: rgb(185, 230, 185);
+}
+#blue {
+    background-color: rgb(201, 201, 238);
+}
+#red {
+    background-color: rgb(242, 200, 200);
+}
+#pink {
+    background-color: rgb(237, 196, 231);
+}
+#green, #blue, #red, #pink, #edit, #close, #done {
+    cursor: pointer;
+}
+#outerGreen, #outerBlue, #outerPink, #outerRed {
+    width: 31px;
+    height: 31px;
+    border-radius: 25px;
+    margin: 0 9px;
+    margin-top: 20px;
+}
+#outerGreen {
+    border: 3px solid rgb(244, 247, 250);
+}
+#outerBlue {
+    border: 3px solid rgb(244, 247, 250);
+}
+#outerPink {
+    border: 3px solid rgb(244, 247, 250);
+}
+#outerRed {
+    border: 3px solid rgb(244, 247, 250);
+}
+
+
+/* Styles for Generating Beautiful 'Todo Cards' */
+.card {
+    margin: 7px;
+    width: 320px;
+    height: 370px;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card h2 {
+    display: flex;
+    margin: 0;
+    margin-top: 50px;
+    margin-left: 7px;
+    width: 310px;
+    max-height: 70px;
+    overflow: hidden;
+}
+.card p {
+    margin: 0;
+    margin-left: 7px;
+    font-size: 14px;
+}
+.card-buttons {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+#cardTask {
+    margin: 14px 7px;
+    font-size: 20px;
+    overflow: auto;
+    font-family: 'Ubuntu', sans-serif;
+    height: 220px;
+}
+.card-buttons button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#cardColor {
+    background-color: rgb(201, 201, 238);
+}
+#cardTitle, #cardTask {
+    color: rgb(14, 11, 54);
+}  
+#cardDate {
+    color: rgb(110, 110, 165);
+}
+
+
+/* Setting Different Styles for different screenSize, to make the website responsive */
+@media only screen and (max-width: 392px) {
+    .header {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    #date {
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 1273px) {
+    .titleAndDate, #task, .template {
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 997px) {
+    .titleAndDate, #task, .template {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 997px) {
+    .titleAndDate, #task, .template {
+        width: 65%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .titleAndDate, #task, .template {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 611px) {
+    .titleAndDate, #task, .template {
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 539px) and (min-width: 450px) {
+    #title {
+        width: 60%;
+    }
+    #date {
+        width: 35%;
+    }
+}

@@ -1,0 +1,98 @@
+<!-- This Project is build by Aditya Kumar
+Github - https://github.com/adityakumar-in
+Repository Link - https://github.com/adityakumar-in/Yhills_Todo_List
+LinkedIn - https://www.linkedin.com/in/aditya-kumar-609909259/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Added Website Title & Logo, also linked External CSS -->
+        <title>Toder - Stay Organized and Get More Done with Toder</title>
+        <link rel="icon" href="Images/logo.svg" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <!-- Displays Icon & Title -->
+        <div class="header center">
+            <img src="Images/logo.svg" alt="Toder Logo" height="45px">
+            <p>Toder - Get Things Done!</p>
+        </div>
+
+        <!-- Displays Input Tags, Template Color Picker & a Submit Button -->
+        <div class="mainContent">
+            <!-- Takes Title & Date of Todo Submission from User -->
+            <div class="fillHeader center">
+                <div class="titleAndDate center">
+                    <input type="text" name="title" id="title" placeholder="Enter Title here">
+                    <input type="date" name="date" id="date">
+                </div>
+            </div>
+
+            <!-- Receives details about Todos here -->
+            <div class="fillTask center">
+                <div id="task">
+                    <textarea placeholder="Enter your Task" rows="5" cols="50" id="description"></textarea>
+                </div>
+            </div>
+
+            <!-- It contains Color Picker & a Submit Button  -->
+            <div class="buttonColors center">
+                <!-- First two Color Picker  -->
+                <div id="outerGreen">
+                    <div class="size" id="green" onclick="greenClicked()"></div>  
+                </div>
+                <div id="outerBlue">
+                    <div class="size" id="blue" onclick="blueClicked()"></div>
+                </div>
+                
+                <!-- Submit Button  -->
+                <div class="buttonCover">
+                    <div class="buttons center">
+                        <div class="btnGlassEffect btn center" id="addTask" onclick="addButton()">+ Add</div>
+                    </div>
+                </div>
+
+                <!-- Last two Color Picker  -->
+                <div id="outerRed">
+                    <div class="size" id="red" onclick="redClicked()"></div>
+                </div>
+                <div id="outerPink">
+                    <div class="size" id="pink" onclick="pinkClicked()"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Displays Sorting buttons 'All', 'Active' & 'Completed', which will sort the Todos Accordingly -->
+        <div class="footer center">
+            <div class="template center">
+                <!-- All Button  -->
+                <div class="buttons center">
+                    <div class="btnGlassEffect1 btn1 center" id="all" onclick="allClicked()">All</div>
+                </div>
+
+                <!-- Active Button  -->
+                <div class="buttons center">
+                    <div class="btnGlassEffect2 btn2 center" id="active" onclick="activeClicked()">Active</div>
+                </div>
+
+                <!-- Completed Button  -->
+                <div class="buttons center">
+                    <div class="btnGlassEffect3 btn3 center" id="completed" onclick="completedClicked()">Completed</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Here we'll generate Cards through JavaScript -->
+        <div class="cards center">
+            <!-- Cards will Show here with JavaScript -->
+        </div>
+
+        <!-- Linked External JavaScript -->
+        <script src="script.js"></script>
+    </body>
+</html>
