@@ -16,6 +16,15 @@ let addTask = document.getElementById("addTask");
 let inputTitle = document.getElementById("title");
 let inputDate = document.getElementById("date");
 let inputTask = document.getElementById("description");
+let date = document.getElementById("date");
+
+// Set Today Date
+const today = new Date();
+const Tyear = today.getFullYear();
+const Tmonth = String(today.getMonth() + 1).padStart(2, '0');
+const Tday = String(today.getDate()).padStart(2, '0');
+const TodayDate = `${Tyear}-${Tmonth}-${Tday}`;
+date.value = TodayDate;
 
 // Loads the Todo Card According to the Selected Sorting Buttons, i.e., 'All', 'Active', & 'Completed'
 let runByDefault = () => {
